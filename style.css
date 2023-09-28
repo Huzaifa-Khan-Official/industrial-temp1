@@ -1,0 +1,412 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #ededed;
+}
+
+/* cover */
+.navbar .container-fluid {
+    flex-direction: column;
+}
+
+.navbarLogo {
+    margin-bottom: 3vh;
+}
+
+.headerLinks {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.coverDiv {
+    background-image: url("./assets/2.jpg");
+    padding-bottom: 15px;
+    background-size: cover;
+    height: 80vh;
+    background-repeat: no-repeat;
+}
+
+.linksDiv {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.linksDiv div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.searchDiv {
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.coverDiv hr {
+    width: 100%;
+}
+
+.navbar {
+    background: transparent !important;
+    font-size: 18px;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.navbar-nav {
+    margin-left: 30px;
+}
+
+.navbar-nav li {
+    margin-right: 25px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu{
+    background-color: white !important;
+    padding: 10px;
+    width: 200%;
+    padding-left: 20px;
+    border: 1px solid black;
+}
+
+.dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+}
+
+
+.dropdown-menu li {
+    margin-bottom: 5px;
+    margin-right: 0;
+    padding: 8px;
+}
+
+.dropdown-toggle::after {
+    border-top: none;
+}
+
+.navDiv {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 8px 5px;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    color: black;
+}
+
+
+.PAndSul {
+    width: 280%;
+    padding: 10px 0;
+    padding-right: 10px;
+}
+
+.PAndSul ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.dropdown:hover .PAndSul{
+    display: flex;
+}
+
+.noBorder h3 {
+    color: black;
+}
+
+.noBorder:hover {
+    border: none !important;
+}
+
+.coverContent h1 {
+    color: white;
+    text-align: center;
+    font-size: 54px;
+}
+
+.coverHeading {
+    width: 70%;
+    margin: 15vh auto;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdownItem {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+#line1 {
+    background-color: white;
+    height: 3px;
+    transition: all .5s;
+    width: 0px;
+}
+
+#line2 {
+    background-color: black;
+    height: 3px;
+    transition: width .5s;
+    width: 0px;
+}
+
+.dropdown-menu li:hover #line2 {
+    width: 50px;
+}
+
+.nav-item:hover #line1 {
+    width: 50px;
+}
+
+@media (max-width:991px) {
+    .navbar-collapse {
+        margin-top: 20px !important;
+    }
+
+    .navbar-nav {
+        margin-left: 10px;
+    }
+
+    .navbar .container-fluid {
+        flex-direction: row;
+    }
+
+    .navbarLogo {
+        margin-bottom: 0;
+    }
+
+    .navbar-collapse {
+        background-color: white;
+    }
+
+    .navbar-collapse a {
+        color: black !important;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+
+    #line1 {
+        background-color: black;
+    }
+}
+
+@media (max-width: 767px) {
+    .coverContent h1 {
+        font-size: 40px;
+    }
+    .coverHeading {
+        width: 90%;
+    }
+}
+
+@media (max-width: 342px) {
+    .coverHeading {
+        margin: 5vh auto;
+    }
+
+    .coverHeading h1 {
+        font-size: 30px;
+    }
+
+    .navbar-brand img {
+        width: 30vw;
+    }
+}
+
+@media (max-width: 570px) {
+    .PAndSul {
+        flex-direction: column;
+    }
+
+    .dropdown-menu2 {
+        border-top: 1px solid black;
+        margin-top: 5vh;
+        padding-top: 5vh !important;
+    }
+
+    .PAndSul ul {
+        width: 95%;
+    }
+}
+
+
+/* end cover */
+
+.cardsDiv {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.cardsDiv .row {
+    margin-right: 0;
+    justify-content: space-around;
+}
+
+.cardsDiv .row .col-12 {
+    margin-top: -5vh;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+}
+
+.card-img {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card-body {
+    box-shadow: 0px 6px 10px 6px rgba(0, 0, 0, 0.2);
+    padding-left: 25px;
+    padding-bottom: 50px;
+}
+
+.card:hover {
+    transition: all .5s;
+    transform: translateY(-10px);
+}
+
+@media (max-width: 242px) {
+    .card-body {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width:767px) {
+    .cardsDiv .row .margintop5 {
+        margin-top: 5vh;
+    }
+}
+/* end cards */
+
+/* capabilities */
+.capabilities {
+    width: 100%;
+}
+
+.capabilitiesVideo video {
+    width: 100%;
+}
+
+.capabilitiesContent {
+    margin-left: 6vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.capabilitiesCol2 {
+    display: flex;
+    align-items: center;
+}
+
+.capabilitiesHeading h2 {
+    font-size: 46px;
+}
+
+@media (max-width: 767px) {
+    .capabilitiesContent {
+        margin-left: 0;
+    }
+}
+
+
+/* end capabilitis */
+
+/* productCategory */
+.productCategoryDiv {
+    padding-top: 1px;
+}
+.productCategoryHeading h2 {
+    text-align: center;
+}
+.productContainer {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.containerDiv {
+    padding: 10px;
+}
+
+.contentDivContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contentDiv {
+    padding: 110px 30px 45px 30px;
+}
+
+.contentDiv h3 {
+    font-weight: 700;
+    color: white;
+    margin: 10px 0px 30px 0px;
+}
+
+.contentDiv a {
+    color: #FFFFFF;
+    border-style: solid;
+    border-radius: 50px 50px 50px 50px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.contentDiv a span {
+    margin-left: 21px;
+}
+/* end productCategory */
+/* numbersDiv */
+.numbersDiv {
+    padding: 10px;
+}
+
+.contentIcon img {
+    width: 50px;
+}
+
+.contentDiv .content {
+    display: flex;
+}
+
+.numberContent {
+    margin-left: 10px;
+}
+
+.numbersCont .contentDiv {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px;
+}
+
+.contentNumber {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contentName {
+    font-size: 16px;
+}
+/* end numbersDiv */
