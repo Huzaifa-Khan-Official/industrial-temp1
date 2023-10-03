@@ -151,7 +151,7 @@
   <!-- cards -->
   <div class="cardsDiv pb-5">
     <div class="row">
-      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-offset="100">
+      <div class="col-12 col-md-4 cardReveal" data-aos-offset="100">
 
         <div class="card">
           <div class="card-body">
@@ -166,7 +166,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4 margintop5" data-aos="fade-up">
+      <div class="col-12 col-md-4 margintop5 cardReveal">
 
         <div class="card">
           <div class="card-body">
@@ -181,7 +181,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4 margintop5" data-aos="fade-up">
+      <div class="col-12 col-md-4 margintop5 cardReveal">
 
         <div class="card">
           <div class="card-body">
@@ -201,7 +201,7 @@
   <!-- end cards -->
 
   <!-- capabilities -->
-  <div class="capabilities pt-5 p-1" data-aos="fade-right" data-aos-offset="300" data-aos-duration="9000">
+  <div class="capabilities pt-5 p-1">
     <div class="row  ps-4 pe-4">
       <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
         <div class="capabilitiesVideo mt-5 mb-5">
@@ -247,7 +247,7 @@
                 <img src="./assets/lineal_img_icon.png" alt="">
               </div>
               <div class="numberContent">
-                <div class="contentNumber">37,500</div>
+                <div class="contentNumber" data-number="37500">0</div>
                 <div class="contentName">tons of yarn</div>
               </div>
             </div>
@@ -260,7 +260,7 @@
                 <img src="./assets/rocket_icon.png" alt="">
               </div>
               <div class="numberContent">
-                <div class="contentNumber">17,000</div>
+                <div class="contentNumber" data-number="17000">0</div>
                 <div class="contentName">tons of fabric</div>
               </div>
             </div>
@@ -273,7 +273,7 @@
                 <img src="./assets/presentaion_icon.png" alt="">
               </div>
               <div class="numberContent">
-                <div class="contentNumber">9,000</div>
+                <div class="contentNumber" data-number="9000">0</div>
                 <div class="contentName">tons of dyed fabric</div>
               </div>
             </div>
@@ -286,7 +286,7 @@
                 <img src="./assets/presentaion_icon_2.png" alt="">
               </div>
               <div class="numberContent">
-                <div class="contentNumber">1,400</div>
+                <div class="contentNumber" data-number="1400">0</div>
                 <div class="contentName">tons ready-made clothes</div>
               </div>
             </div>
@@ -298,22 +298,9 @@
   <!-- end numbersDiv -->
 
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000
-    });
-  </script>
   <script src="app.js"></script>
-  <script>
-    $(document).ready(function(){
-      $(".contentNumber").counterUp({
-        delay : 10,
-        timer : 1200
-      });
-    });
-  </script>
 </body>
 
 </html>

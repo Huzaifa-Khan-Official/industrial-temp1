@@ -32,9 +32,6 @@ for (var i = 0; i < products.length; i++) {
     var productImg = products[i].img;
     var containerDiv = document.createElement("div");
     containerDiv.setAttribute("class", "col-12 col-md-4 containerDiv");
-    containerDiv.setAttribute("data-aos", "fade-left");
-    containerDiv.setAttribute("data-aos-offset", "200");
-    containerDiv.setAttribute("data-aos-duration", "9000");
     containerDiv.innerHTML = `
     <div class="productContainer" style="background-image: url(${productImg});">
         <div class="contentDivContainer">
@@ -52,6 +49,94 @@ for (var i = 0; i < products.length; i++) {
     productCategoryRow.appendChild(containerDiv);
 }
 
+window.addEventListener("scroll", counterReveal);
+
+function counterReveal() {
+    var numbersDiv = document.querySelector(".numbersDiv");
+    var windowHeight = window.innerHeight;
+    var numbersDivTop = numbersDiv.getBoundingClientRect().top;
+    var revealPoint = 100;
+
+    if (numbersDivTop < windowHeight - revealPoint) {
+        numbersDiv.classList.add("active");
+        var speed = 200;
+        var contentNumber = document.querySelectorAll(".contentNumber");
+
+        contentNumber.forEach((curElement) => {
+            const updateNum = () => {
+                const targetNum = parseInt(curElement.dataset.number)
+                const initialNum = parseInt(curElement.innerText);
+                const incrementNum = Math.ceil(targetNum / speed);
+                const incrementedNum = initialNum + incrementNum
+
+                if (initialNum < targetNum) {
+                    curElement.innerText = `${incrementedNum}+`;
+
+                    setTimeout(updateNum, 1);
+                }
+            }
+
+            updateNum();
+        });
+    } else {
+        numbersDiv.classList.remove("active");
+        var contentNumber = document.querySelectorAll(".contentNumber");
+        contentNumber.forEach((curElement) => {
+            curElement.innerText = `0+`
+        })
+    }
+}
 
 
-  
+window.addEventListener("scroll", cardReveal);
+
+function cardReveal() {
+    var cards = document.querySelectorAll(".cardReveal");
+    for (var i = 0; i < cards.length; i++) {
+        var windowHeight = window.innerHeight;
+        var revealTop = cards[i].getBoundingClientRect().top;
+        var revealPoint = 20;
+
+        if (revealTop < windowHeight - revealPoint) {
+            cards[i].classList.add("active");
+        } else {
+            cards[i].classList.remove("active");
+        }
+    }
+}
+
+cardReveal()
+
+window.addEventListener("scroll", capabilitiesReveal);
+
+function capabilitiesReveal() {
+    var capabilities = document.querySelector(".capabilities");
+    var windowHeight = window.innerHeight;
+    var capabilitiesTop = capabilities.getBoundingClientRect().top;
+    var revealPoint = 200;
+    if (capabilitiesTop < windowHeight - revealPoint) {
+        capabilities.classList.add("active");
+
+    } else {
+        capabilities.classList.remove("active");
+    }
+
+}
+
+
+window.addEventListener("scroll", productReveal);
+
+function productReveal() {
+    var containerDiv = document.querySelectorAll(".containerDiv");
+    var windowHeight = window.innerHeight;
+    var revealPoint = 150;
+    console.log(containerDiv);
+    containerDiv.forEach((curDiv) => {
+        var curDivTop = curDiv.getBoundingClientRect().top;
+        if (curDivTop < windowHeight - revealPoint) {
+            curDiv.classList.add("active");
+        } else {
+            curDiv.classList.remove("active");
+        }
+    })
+}

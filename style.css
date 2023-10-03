@@ -135,12 +135,12 @@ body {
 .coverContent h1 {
     color: white;
     text-align: center;
-    font-size: 54px;
+    font-size: 50px;
 }
 
 .coverHeading {
     width: 70%;
-    margin: 15vh auto;
+    margin: 10vh auto;
 }
 
 .nav-link {
@@ -286,6 +286,19 @@ body {
     transform: translateY(-10px);
 }
 
+.cardReveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.cardReveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
 @media (max-width: 242px) {
     .card-body {
         padding-left: 15px;
@@ -302,6 +315,7 @@ body {
 /* capabilities */
 .capabilities {
     width: 100%;
+    opacity: 0;
 }
 
 .capabilitiesVideo video {
@@ -321,6 +335,21 @@ body {
 
 .capabilitiesHeading h2 {
     font-size: 46px;
+}
+
+.capabilities.active {
+    animation: fade-in-left 1.4s ease-in 0s 1 normal forwards;
+}
+@keyframes fade-in-left {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 @media (max-width: 767px) {
@@ -348,6 +377,7 @@ body {
 
 .containerDiv {
     padding: 10px;
+    opacity: 0;
 }
 
 .contentDivContainer {
@@ -376,10 +406,31 @@ body {
 .contentDiv a span {
     margin-left: 21px;
 }
+
+.containerDiv.active {
+    animation: fade-in-right 1s ease-in 0s 1 normal forwards;
+}
+@keyframes fade-in-right {
+	0% {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
 /* end productCategory */
 /* numbersDiv */
 .numbersDiv {
-    padding: 10px;
+    padding: 5px;
+    background-color: white;
+    padding-bottom: 0;
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease-in-out;
 }
 
 .contentIcon img {
@@ -397,8 +448,17 @@ body {
 .numbersCont .contentDiv {
     align-items: center;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 30px;
+    width: 100%;
+}
+
+.numbersCont {
+    padding: 5px;
+}
+
+.numbersCont .row {
+    padding: 10px;
 }
 
 .contentNumber {
@@ -408,5 +468,11 @@ body {
 
 .contentName {
     font-size: 16px;
+    width: 100px;
+}
+
+.numbersDiv.active {
+    transform: translateY(0px);
+    opacity: 1;
 }
 /* end numbersDiv */
