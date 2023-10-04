@@ -115,10 +115,12 @@ function capabilitiesReveal() {
     var capabilitiesTop = capabilities.getBoundingClientRect().top;
     var revealPoint = 200;
     if (capabilitiesTop < windowHeight - revealPoint) {
+        capabilities.classList.remove("inactive");
         capabilities.classList.add("active");
 
     } else {
         capabilities.classList.remove("active");
+        capabilities.classList.add("inactive");
     }
 
 }
@@ -134,9 +136,11 @@ function productReveal() {
     containerDiv.forEach((curDiv) => {
         var curDivTop = curDiv.getBoundingClientRect().top;
         if (curDivTop < windowHeight - revealPoint) {
+            curDiv.classList.remove("inactive");
             curDiv.classList.add("active");
         } else {
             curDiv.classList.remove("active");
+            curDiv.classList.add("inactive");
         }
     })
 }

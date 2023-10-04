@@ -138,6 +138,20 @@ body {
     font-size: 50px;
 }
 
+.coverContent {
+    animation: slideInCenter 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes slideInCenter {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
 .coverHeading {
     width: 70%;
     margin: 10vh auto;
@@ -338,8 +352,25 @@ body {
 }
 
 .capabilities.active {
-    animation: fade-in-left 1.4s ease-in 0s 1 normal forwards;
+    animation: fade-in-left 1s ease-in-out 0s 1 normal forwards;
 }
+
+.capabilities.inactive {
+    animation: fadeOutLeft 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes fadeOutLeft {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+}
+
 @keyframes fade-in-left {
 	0% {
 		opacity: 0;
@@ -410,6 +441,23 @@ body {
 .containerDiv.active {
     animation: fade-in-right 1s ease-in 0s 1 normal forwards;
 }
+
+.containerDiv.inactive {
+    animation: fadeOutRight 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes fadeOutRight {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+}
+
 @keyframes fade-in-right {
 	0% {
 		opacity: 0;
