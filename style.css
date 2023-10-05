@@ -524,3 +524,88 @@ body {
     opacity: 1;
 }
 /* end numbersDiv */
+
+/* Business Category Div */
+.businessCategoryParent {
+    padding: 50px 30px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+
+.businessCategory{
+    padding: 10px;
+}
+
+.flexEnd {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    height: 56vh;
+    border: 1px solid rgba(0, 0, 0, 0.159);
+};
+
+.flexEnd:hover .businessStrategy2{
+    display: block !important;
+}
+
+.flexEnd:hover #displayNone {
+    padding: 20px;
+    color: white !important;
+    background-color: #2F668E;
+    display: block;
+    height: 56vh;
+    animation: fadeInBottom .5s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeInBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+#displayNone a{
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid white;
+}
+.displayNone2 h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.businessStrengthImg {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url("./assets/4.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+#displayNone p {
+    margin-bottom: 20px;
+}
+
+.businessStrategy2, .businessStrength2, .coreValues2 {
+    display: none;
+}
+
+#displayNone {
+    display: none;
+}
+
+.flexEnd:hover .displayNone2 {
+    display: none;
+}

@@ -143,4 +143,17 @@ function productReveal() {
             curDiv.classList.add("inactive");
         }
     })
-}
+};
+
+// var businessCategoryParent = document.querySelector(".businessCategoryParent");
+
+// function changeBackground(num) {
+//     if (num == 1) {
+//         businessCategoryParent.style.background = `url("./assets/4.jpg")`;
+//     } else if (num == 2) {
+//         businessCategoryParent.style.background = `url("./assets/productstrength1.jpg")`;
+//     } else if (num == 3 ) {
+//         businessCategoryParent.style.background = `url("./assets/ourvalues1.jpg")`;
+
+//     }
+// }
